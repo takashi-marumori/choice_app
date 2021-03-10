@@ -15,10 +15,10 @@ ul,li {
   margin: 0;
 }
 
-/*ヘッダー*/
-header {
+/*第一ヘッダー*/
+.top-header {
   height: 10vh;
-  background-color: #ffffff;
+  background-color: #c3dcbe;
   border-bottom: 1px solid #f0f4f9;
 }
 
@@ -46,4 +46,30 @@ header {
 .right-header:hover, .left-header:hover {
   color: #58d2b2;
   cursor: pointer;
+}
+
+/*第二ヘッダー*/
+.under-header {
+  height: 6vh;
+  background-color:#333;
+  border-bottom: 1px solid #f0f4f9;
+  padding-left: 9vh;
+  line-height: 6vh;
+}
+
+.style{
+  color:#f0f4f9;
+  padding: 0.8vw;
+  letter-spacing: 0.3vh;
+}
+
+.style:hover{
+  background-color: rgb(90, 89, 89);
+  cursor: pointer;
+}
+
+.border{
+  color: aliceblue;
+  margin: -0.5vw;
+  font-size: 2vh;
 }
