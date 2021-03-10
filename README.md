@@ -1,6 +1,6 @@
 # choice_app
 
-過去に作ったオリジナルアプリ”"choice-styleを<br />
+過去に作ったオリジナルアプリ"choice-style"を<br />
 Node.jsやJquery、Vue.jsなどを使ってリメイク<br />
 するものです。<br />
 
