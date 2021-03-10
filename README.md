@@ -4,8 +4,8 @@
 Node.jsやJquery、Vue.jsなどを使ってリメイク<br />
 するものです。<br />
 
-機能に関しては＜https://github.com/takashi-marumori/choice-style＞  参照で。<br />
-またはherokuに公開している＜https://choice-style.herokuapp.com/＞<br />
+機能に関しては＜  https://github.com/takashi-marumori/choice-style   ＞参照で。<br />
+またはherokuに公開している＜  https://choice-style.herokuapp.com/   ＞<br />
 出来上がった機能は出来次第更新。勉強しながらなのでゆっくりめになります。
 
 [現在]
