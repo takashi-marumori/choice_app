@@ -23,6 +23,17 @@ app.use(
   })
 )
 
+app.use((req, res, next) => {
+  if (req.session.userId === undefined) {
+    res.locals.username = 'ゲスト';
+    res.locals.isLoggedIn = false;
+  } else {
+    res.locals.username = req.session.username;
+    res.locals.isLoggedIn = true;
+  }
+  next();
+});
+
 app.get('/', (req, res) => {
   res.render('top.ejs');
 });

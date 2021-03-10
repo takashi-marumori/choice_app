@@ -1,0 +1,13 @@
+<header>
+  <div class="header-wrapper" >
+    <a href="/" class="left-header">Choice App</a>
+    <% if (locals.isLoggedIn) { %>
+      <a class="right-header" href="/log_out">ログアウト</a>
+    <% } else { %>
+      <div>
+        <a class="right-header login-show">ログイン</a>
+        <a class="right-header signup-show">新規登録</a>
+      </div>
+    <% } %>
+  </div>
+</header>
