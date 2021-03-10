@@ -22,3 +22,9 @@ app.use(
     saveUninitialized: false,
   })
 )
+
+app.get('/', (req, res) => {
+  res.render('top.ejs');
+});
+
+app.listen(3000);
