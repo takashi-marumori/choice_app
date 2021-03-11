@@ -1,0 +1,19 @@
+<div class="signup-modal-wrapper" id="signup-modal">
+  <div class="modal">
+    <div id="signup-close-modal">
+      <i class="fa fa-2x fa-times"></i>
+    </div>
+    <div id="signup-form">
+      <h2>新規登録</h2>
+      <form action="/sign_up" method="post" id="sign_up-form">
+        <p class="error-message" id="sign_up-username-error-message"></p>
+        <input class="form-control" type="text" placeholder="ユーザー名" name="username" id="sign_up-username">
+        <p class="error-message" id="sign_up-email-error-message"></p>
+        <input class="form-control" type="text" placeholder="メールアドレス" name="email" id="sign_up-email">
+        <p class="error-message" id="sign_up-password-error-message"></p>
+        <input class="form-control" type="password" placeholder="パスワード" name="password" id="sign_up-password">
+        <input id="submit-btn" type="submit" value="登録する">
+      </form>
+    </div>
+  </div>
+</div>
