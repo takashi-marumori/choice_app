@@ -38,4 +38,39 @@ app.get('/', (req, res) => {
   res.render('top.ejs');
 });
 
+app.post('/sign_up',
+(req, res, next) => {
+  const email = req.body.email;
+  
+  connection.query(
+    'SELECT * FROM users WHERE email = ?',
+    [email],
+    (error, results) => {
+      if (results.length > 0) {
+        res.render('/');
+      } else {
+        next();
+      }
+    }
+  );
+  
+},
+
+(req,res) => {
+  const nickname = req.body.nickname;
+  const email = req.body.email;
+  const password = req.body.password;
+  bcrypt.hash(password,10,(error,hash) => {
+    connection.query(
+      'INSERT INTO users (nickname, email, password) VALUES (?, ?, ?)',
+      [nickname, email, hash],
+      (error, results) => {
+        req.session.userId = results.insertId;
+        req.session.nickname = nickname;
+        res.redirect('/');
+      }
+    );
+  });
+});
+
 app.listen(3000);

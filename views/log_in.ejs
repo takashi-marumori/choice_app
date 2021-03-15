@@ -1,19 +1,16 @@
-<div class="signup-modal-wrapper" id="signup-modal">
+<div class="login-modal-wrapper" id="login-modal">
   <div class="modal">
-    <div id="signup-close-modal">
+    <div id="login-close-modal">
       <i class="fa fa-2x fa-times"></i>
     </div>
-    <div id="signup-form">
-      <h2>新規登録</h2>
-      <form action="/sign_up" method="post" id="sign_up-form">
-        <p class="error-message" id="sign_up-username-error-message"></p>
-        <input class="form-control" type="text" placeholder="ユーザー名" name="username" id="sign_up-username">
-        <p class="error-message" id="sign_up-email-error-message"></p>
-        <input class="form-control" type="text" placeholder="メールアドレス" name="email" id="sign_up-email">
-        <p class="error-message" id="sign_up-password-error-message"></p>
-        <input class="form-control" type="password" placeholder="パスワード" name="password" id="sign_up-password">
-        <input id="submit-btn" type="submit" value="登録する">
+    <div id="login-form app">
+      <h2>ログイン</h2>
+      <form action="/log_in" method="post">
+        <input class="form-control" type="text" placeholder="メールアドレス" name="email">
+        <input class="form-control" type="password" placeholder="パスワード" name="password">
+        <input id="login-btn" type="submit" value="ログインする">
       </form>
     </div>
   </div>
 </div>
+<script type="text/javascript" src="sign.js"></script>
