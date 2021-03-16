@@ -9,4 +9,19 @@ const sign_up = new Vue({
     password: "",
     email: ""
   },
+  validations: {
+    nickname: {
+        required
+    },
+    email: {
+      required,
+      email
+    },
+    password: {
+      required,
+    }
+  },
+  methods:{
+    
+  }
 });
