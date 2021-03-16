@@ -73,4 +73,35 @@ app.post('/sign_up',
   });
 });
 
+app.post('/log_in', (req, res) => {
+  const email = req.body.email;
+  connection.query(
+    'SELECT * FROM users WHERE email = ?',
+    [email],
+    (error, results) => {
+      if (results.length > 0) {
+        const plain = req.body.password;
+        const hash = results[0].password;
+        bcrypt.compare(plain,hash,(error,isEqual) => {
+          if(isEqual){
+          req.session.userId = results[0].id;
+            req.session.username = results[0].username;
+            res.redirect('/');
+          } else {
+            res.redirect('/');
+          }
+        });
+      } else {
+        res.redirect('/');
+      }
+    }
+  );
+});
+
+app.get('/log_out', (req, res) => {
+  req.session.destroy(error => {
+    res.redirect('/');
+  });
+});
+
 app.listen(3000);

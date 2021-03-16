@@ -1,14 +1,12 @@
-new Vue({
-  el:'#app',
+Vue.use(window.vuelidate.default);
+const { required, email } = window.validators;
+
+const sign_up = new Vue({
+  el: '#signup-form',
   data: {
-    email: '',
-    password: '',
-    nickname: ''
+    title: "新規登録",
+    nickname: "",
+    password: "",
+    email: ""
   },
-  validations: {
-    email: {
-      required,
-      
-    }
-  }
-})
+});
